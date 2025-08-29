@@ -4,7 +4,7 @@ dotenv.config();
 
 async function dbConnect() {
   try {
-    const dbURL = process.env.MONGO_URL; 
+    const dbURL = process.env.MONGO_URL; // uses MONGO_URL from .env
     await mongoose.connect(dbURL);
     console.log("DB Connected Successfully");
   } catch (error) {
